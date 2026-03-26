@@ -1,18 +1,22 @@
 # Drahomír Machala — Diagnostika & Opravy Podvozků
 **Datum zahájení:** 2026-03-26
+**Poslední update:** 2026-03-26
 
 ---
 
 ## Co je hotovo
 - [x] Analýza původního webu (drahomirmachala.cz) — extrahovány všechny sekce, služby, kontakt, ceník
 - [x] Analýza DNA všech 10 předchozích projektů — identifikovány vzory k vyvarování
-- [x] Návrh unikátní vizuální identity:
-  - Světlé téma (všechny 3 poslední projekty byly tmavé)
-  - Barvy: warm white #FAFAF8 + burnt orange/russet #B8410A (nepoužito v žádném projektu)
-  - Fonty: Space Grotesk (nadpisy) + Figtree (text) — v portfoliu nepoužité
-  - Split hero layout (60% text / 40% accent panel) — nový pattern
+- [x] Návrh unikátní vizuální identity
 - [x] Vytvořen index.html — kompletní jednostránkový web
-- [x] Vytvořen _project-memory/summary.md
+- [x] Screenshot review + oprava všech vizuálních chyb:
+  - Hero text zarovnán s navigací (clamp padding)
+  - Ikony opraveny — crosshair pro geometrii, activity monitor pro Beissbarth, kalendář pro 1994
+  - Services header layout — subtitle pod nadpis (ne vedle)
+  - Mobilní hero-right min-height 320px, viditelná "V OBORU OD / 1994"
+  - Services gap zmenšen
+- [x] GitHub push — https://github.com/supercigan/drahomirmachala (2 commity)
+- [x] DNA soubor vytvořen
 
 ---
 
@@ -31,25 +35,18 @@
 
 ---
 
-## Proč tyto fonty a barvy
-- **Space Grotesk** — geometrický, technický charakter, svěží, nebyl použit v žádném z 10 DNA projektů
-- **Figtree** — humanistický bezpatkový, čitelný, nebyl použit v žádném projektu
-- **#B8410A (burnt orange/russet)** — teplý, zemitý, evokuje kov/strojírenství, odlišný od jasné oranžové AUROPS (#F05F2E), nepoužit dosud
-- **Světlé téma** — kontrast k trendu tmavých témat (DH-servis, AUROPS, MANITECH)
-
----
-
 ## Důležitá rozhodnutí
 - Překlep v emailu opraven: drahormimachala → drahomirmachala
-- Nová adresa od 1.7.2025 prominentně zobrazena v sekci O mně jako informační banner
-- Hero: split layout s velkým číslem "30+" v accent panelu — silný vizuální statement
-- Nevyužity: canvas animace, ghost text, diagonální linky, radial glow (vše použito v jiných projektech)
-- Stats karty s counter animací (JS IntersectionObserver)
+- Nová adresa od 1.7.2025 prominentně zobrazena jako notice banner v sekci O mně
+- Hero: split layout 62%/38% s velkým "30+" v accent panelu — silný vizuální statement
+- Světlé téma — kontrast k posledním 3 tmavým projektům portfolia
+- Space Grotesk + Figtree — v portfoliu dosud nepoužité
+- Burnt orange #B8410A — nepoužit v žádném z 10 předchozích DNA projektů
+- Counter animace v stat kartách (IntersectionObserver + requestAnimationFrame)
+- Nevyužity: canvas animace, ghost text, diagonální linky, radial glow
 
 ---
 
 ## Příští kroky
-- [ ] Otestovat responzivitu na mobilech
-- [ ] GitHub push (repo: drahomirmachala)
-- [ ] Vercel deploy (auto přes GitHub)
-- [ ] Vytvořit DNA soubor po dokončení
+- [ ] Vercel deploy (auto přes GitHub push — zkontrolovat dashboard)
+- [x] DNA soubor → C:/Users/karel/DNA-projekty/DNA-drahomirmachala.md
