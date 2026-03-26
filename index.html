@@ -686,6 +686,35 @@
       .btn-primary, .btn-outline { justify-content: center; }
       .price-item { flex-direction: column; align-items: flex-start; gap: .5rem; }
     }
+
+    /* ─── WATERMARK ─────────────────────────────────────── */
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    .watermark-inner {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      gap: 0;
+      align-items: center;
+      justify-items: center;
+    }
+    .watermark-inner span {
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: rgba(100, 40, 5, 0.1);
+      transform: rotate(-30deg);
+      white-space: nowrap;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
@@ -1086,6 +1115,22 @@
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+</script>
+<!-- WATERMARK -->
+<div class="watermark" aria-hidden="true">
+  <div class="watermark-inner" id="wm"></div>
+</div>
+<script>
+  (function(){
+    const t = 'Demoverze\u00a0–\u00a0Tom\u00e1\u0161\u00a0Smol\u00edk';
+    const c = document.getElementById('wm');
+    // 4 cols × 7 rows = 28 cells
+    for(let i = 0; i < 28; i++){
+      const s = document.createElement('span');
+      s.textContent = t;
+      c.appendChild(s);
+    }
+  })();
 </script>
 </body>
 </html>
